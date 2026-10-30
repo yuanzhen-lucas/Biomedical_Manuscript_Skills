@@ -1,0 +1,4 @@
+[
+  {"study_id":"synthetic-study-1","effect":0.2,"standard_error":0.1,"outcome_id":"synthetic-outcome","effect_measure":"mean_difference","direction":"higher_is_more","unit":"synthetic points","source_ids":[]},
+  {"study_id":"synthetic-study-2","effect":0.5,"standard_error":0.2,"outcome_id":"synthetic-outcome","effect_measure":"mean_difference","direction":"higher_is_more","unit":"synthetic points","source_ids":[]}
+]

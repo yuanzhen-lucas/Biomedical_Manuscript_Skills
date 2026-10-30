@@ -1,0 +1,12 @@
+[
+  {
+    "study_id": "[SOURCE STUDY ID]",
+    "effect": 0.0,
+    "standard_error": 0.0,
+    "outcome_id": "[HARMONIZED OUTCOME ID]",
+    "effect_measure": "[EFFECT SCALE]",
+    "direction": "[HARMONIZED DIRECTION]",
+    "unit": "[UNIT OR NULL]",
+    "source_ids": []
+  }
+]

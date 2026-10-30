@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/biomedical-manuscript/reference-record.schema.json",
+  "title": "ReferenceRecord",
+  "type": "object",
+  "required": ["reference_id", "schema_version", "title", "authors", "verification_depth"],
+  "properties": {
+    "reference_id": {"type": "string", "minLength": 1},
+    "schema_version": {"const": "1.0"},
+    "title": {"type": "string", "minLength": 1},
+    "authors": {"type": "array", "items": {"type": "string"}},
+    "year": {"type": ["integer", "null"]},
+    "doi": {"type": ["string", "null"], "pattern": "^10\\.\\d{4,9}/\\S+$"},
+    "pmid": {"type": ["string", "null"]},
+    "pmcid": {"type": ["string", "null"]},
+    "trial_id": {"type": ["string", "null"]},
+    "abstract": {"type": ["string", "null"]},
+    "verification_depth": {"enum": ["L0_unverified", "L1_identity_verified", "L2_abstract_checked", "L3_full_text_checked", "L4_human_reviewed"]},
+    "publication_status": {"type": "string"},
+    "relations": {"type": "array"}
+  },
+  "additionalProperties": true
+}

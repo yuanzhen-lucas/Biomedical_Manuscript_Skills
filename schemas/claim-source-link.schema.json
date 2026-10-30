@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/biomedical-manuscript/claim-source-link.schema.json",
+  "title": "ClaimSourceLink",
+  "type": "object",
+  "required": ["link_id", "schema_version", "claim_id", "source_id", "support_direction", "verification_depth", "human_review_status"],
+  "properties": {
+    "link_id": {"type": "string"},
+    "schema_version": {"const": "1.0"},
+    "claim_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "support_direction": {"enum": ["supports", "partially_supports", "contradicts", "mixed", "unclear", "not_applicable"]},
+    "verification_depth": {"enum": ["L0_unverified", "L1_identity_verified", "L2_abstract_checked", "L3_full_text_checked", "L4_human_reviewed"]},
+    "directness": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "human_review_status": {"enum": ["not_reviewed", "review_requested", "reviewed", "approved", "rejected", "needs_revision"]}
+  },
+  "additionalProperties": true
+}

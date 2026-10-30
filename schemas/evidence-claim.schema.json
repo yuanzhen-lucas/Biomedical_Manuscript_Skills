@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/biomedical-manuscript/evidence-claim.schema.json",
+  "title": "EvidenceClaim",
+  "type": "object",
+  "required": ["claim_id", "schema_version", "claim_text", "claim_type", "epistemic_status", "human_review_status"],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "schema_version": {"const": "1.0"},
+    "claim_text": {"type": "string", "minLength": 1},
+    "claim_type": {"enum": ["descriptive", "prevalence", "comparative", "associative", "causal", "mechanistic", "diagnostic", "prognostic", "predictive", "therapeutic", "safety", "methodological", "guideline", "background"]},
+    "manuscript_section": {"type": ["string", "null"]},
+    "epistemic_status": {"type": "string"},
+    "study_context": {"type": ["string", "null"]},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "contradictory_sources": {"type": "array", "items": {"type": "string"}},
+    "human_review_status": {"enum": ["not_reviewed", "review_requested", "reviewed", "approved", "rejected", "needs_revision"]}
+  },
+  "additionalProperties": true
+}
