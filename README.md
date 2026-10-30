@@ -38,7 +38,15 @@ If a newly installed Skill does not appear in Codex, restart Codex and check its
 
 ### Install Skills in ChatGPT
 
-Local Codex skill folders and the Python CLI installation do not sync to your ChatGPT account. If Skills are available for your account or workspace, install them separately in ChatGPT: open **Plugins → Plugin Directory → Skills**, choose **Create → Upload from your computer**, and upload the Skill you want. This repository contains 16 separate Skills; install each one you want ChatGPT to use. Confirm it appears under **Installed**, then invoke it with `@` in ChatGPT or describe a task that matches its skill description. Workspace settings and product availability can affect whether these controls are shown.
+Local Codex skill folders and the Python CLI installation do not sync to your ChatGPT account. Standalone skill folders are available in the ChatGPT desktop app; if Skills are available for your account or workspace, open **Skills** in the sidebar and use **Create → Upload from your computer** to upload the Skill you want. This repository contains 16 separate Skills; upload each one you want ChatGPT to use. Confirm it appears under **Installed**, then choose it from the `@` menu in a new chat.
+
+For ChatGPT Chat or Work on the web or mobile, OpenAI documents Skills as available when bundled in a plugin. This repository includes the plugin manifests and icon needed to package all 16 skills. From the repository root, create the plugin archive:
+
+~~~bash
+zip -r /tmp/biomedical-manuscript-skills-plugin.zip plugin.json .codex-plugin assets/biomedical.svg skills
+~~~
+
+The archive has `.codex-plugin/plugin.json` and `skills/<skill-name>/SKILL.md` at its root. In ChatGPT, use **Plugins → Plugin Directory → Upload plugin** and choose the archive; after validation, install the plugin and select a skill with `@` in a new chat. The plugin's `websiteURL` points to this repository: <https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills>. Product availability and workspace settings can affect which controls are shown; see [OpenAI's Skills in ChatGPT guide](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) and [Build skills](https://learn.chatgpt.com/docs/build-skills).
 
 For command syntax, run `biomed --help`. The Python interface requires Python 3.11 or later. PDF text extraction is optional and requires the `pdf` extra.
 

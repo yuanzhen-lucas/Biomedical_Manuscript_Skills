@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "biomedical-manuscript-skills",
+  "version": "1.0.0",
+  "description": "Evidence-centered biomedical manuscript workflows and research review skills.",
+  "author": {
+    "name": "Biomedical Manuscript Skills contributors"
+  },
+  "homepage": "https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills",
+  "repository": "https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills",
+  "license": "Apache-2.0",
+  "keywords": ["biomedical", "manuscript", "evidence", "research"]
+}

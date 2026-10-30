@@ -1,0 +1,28 @@
+{
+  "name": "biomedical-manuscript-skills",
+  "version": "1.0.0",
+  "description": "Evidence-centered biomedical manuscript workflows and research review skills.",
+  "author": {
+    "name": "Biomedical Manuscript Skills contributors"
+  },
+  "homepage": "https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills",
+  "repository": "https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills",
+  "license": "Apache-2.0",
+  "keywords": ["biomedical", "manuscript", "evidence", "research"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Biomedical Manuscript",
+    "shortDescription": "Biomedical research workflows",
+    "longDescription": "Sixteen evidence-centered skills for biomedical research questions, literature searches, evidence synthesis, manuscript writing and review, meta-analysis, and submission. They preserve missing and contradictory evidence, verification depth, uncertainty, and human review.",
+    "developerName": "Biomedical Manuscript Skills contributors",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://github.com/yuanzhen-lucas/Biomedical_Manuscript_Skills",
+    "brandColor": "#2C6E49",
+    "composerIcon": "./assets/biomedical.svg",
+    "logo": "./assets/biomedical.svg",
+    "defaultPrompt": [
+      "Use the relevant biomedical workflow skill for my research task."
+    ]
+  }
+}
