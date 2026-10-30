@@ -23,6 +23,8 @@ python -m pip install -e .
 biomed init
 ~~~
 
+This installs the local `biomed` command-line application. It does not install or register Skills in Codex or ChatGPT.
+
 Install the Skills for all your local Codex projects:
 
 ~~~bash
@@ -31,6 +33,12 @@ ln -s "$PWD"/skills/biomedical-* ~/.agents/skills/
 ~~~
 
 Run this from the repository root. Codex also supports repository-scoped Skills under .agents/skills; use that location if you only want them available in this project. The symlinks point to this checkout, so keep the repository in place or recreate them after moving it.
+
+If a newly installed Skill does not appear in Codex, restart Codex and check its Skills selector.
+
+### Install Skills in ChatGPT
+
+Local Codex skill folders and the Python CLI installation do not sync to your ChatGPT account. If Skills are available for your account or workspace, install them separately in ChatGPT: open **Plugins → Plugin Directory → Skills**, choose **Create → Upload from your computer**, and upload the Skill you want. This repository contains 16 separate Skills; install each one you want ChatGPT to use. Confirm it appears under **Installed**, then invoke it with `@` in ChatGPT or describe a task that matches its skill description. Workspace settings and product availability can affect whether these controls are shown.
 
 For command syntax, run `biomed --help`. The Python interface requires Python 3.11 or later. PDF text extraction is optional and requires the `pdf` extra.
 
