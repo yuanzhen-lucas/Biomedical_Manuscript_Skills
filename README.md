@@ -23,11 +23,14 @@ python -m pip install -e .
 biomed init
 ~~~
 
-The Skills can be copied into a local Codex skills directory:
+Install the Skills for all your local Codex projects:
 
 ~~~bash
-cp -R skills/biomedical-* ~/.codex/skills/
+mkdir -p ~/.agents/skills
+ln -s "$PWD"/skills/biomedical-* ~/.agents/skills/
 ~~~
+
+Run this from the repository root. Codex also supports repository-scoped Skills under .agents/skills; use that location if you only want them available in this project. The symlinks point to this checkout, so keep the repository in place or recreate them after moving it.
 
 For command syntax, run `biomed --help`. The Python interface requires Python 3.11 or later. PDF text extraction is optional and requires the `pdf` extra.
 
